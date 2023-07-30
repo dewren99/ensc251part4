@@ -276,6 +276,19 @@ public:
 		}
 		return nullptr;
 	}
+	/*
+	TokenSP process_int_id() override
+	{
+		if(process_token())
+		{
+			if(TokenSP tObjP{tokenObjectPs[tracker]->process_id()})
+			{
+				add_childP(tObjP);
+				return shared_from(this);
+			}
+		}
+		return nullptr;
+	}
 
 	TokenSP process_pointer_primary_exp() override
 	{
@@ -315,19 +328,7 @@ public:
 		}
 		return nullptr;
 	}
-
-	TokenSP process_int_id() override
-	{
-		if(process_token())
-		{
-			if(TokenSP tObjP{tokenObjectPs[tracker]->process_id()})
-			{
-				add_childP(tObjP);
-				return shared_from(this);
-			}
-		}
-		return nullptr;
-	}
+	*/
 };
 
 class id:public StringBasedToken
@@ -455,6 +456,12 @@ public:
 	postfix_operator(const std::string &opValue, int lineIndex, int posIndex): StringBasedToken(opValue, lineIndex, posIndex){ };
 	// TODO: ***** Complete this class if needed
 	TokenSP process_postfix_operator() override { return process_token(); }
+	void print_traverse() override
+	{
+		traverse_children_post_order(
+							static_cast<traverse_func>(&punctuator::print_traverse),
+							static_cast<action_func>(&punctuator::print_action));
+	}
 };
 
 class string:public StringBasedToken

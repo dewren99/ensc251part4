@@ -71,6 +71,7 @@ char *demangle(const char *typeName) {
 TokenSP postfix_exp()
 {
 	// TODO: ***** Complete this function
+	std::size_t old_tracker{tracker};
 
 	auto subTreeP{tokenObjectPs[tracker]->process_id()};
 	if(subTreeP)
@@ -84,6 +85,7 @@ TokenSP postfix_exp()
 			return nullptr;
 	}
 
+	tracker = old_tracker;
 	subTreeP = tokenObjectPs[tracker]->process_primary_exp();
 	// TODO: ***** Complete this function
 	return subTreeP;
@@ -92,6 +94,8 @@ TokenSP postfix_exp()
 TokenSP int_postfix_exp()
 {
 	// TODO: ***** Complete this function
+	std::size_t old_tracker{tracker};
+
 	auto subTreeP{tokenObjectPs[tracker]->process_int_id()};
 	if(subTreeP)
 	{
@@ -104,6 +108,7 @@ TokenSP int_postfix_exp()
 			return nullptr;
 	}
 
+	tracker = old_tracker;
 	subTreeP = tokenObjectPs[tracker]->
 	// TODO: ***** Complete this function
 											process_int_primary_exp();
