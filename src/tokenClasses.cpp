@@ -99,6 +99,7 @@ TokenSP int_postfix_exp()
 	auto subTreeP{tokenObjectPs[tracker]->process_int_id()};
 	if(subTreeP)
 	{
+		std::cout << "[int_postfix_exp] int_id postfix_operator" << std::endl;
 		if(TokenSP tObjP{tokenObjectPs[tracker]->process_postfix_operator()})
 		{
 			tObjP->add_childP(subTreeP);
@@ -109,6 +110,7 @@ TokenSP int_postfix_exp()
 	}
 
 	tracker = old_tracker;
+	std::cout << "[int_postfix_exp] process_int_primary_exp" << std::endl;
 	subTreeP = tokenObjectPs[tracker]->
 	// TODO: ***** Complete this function
 											process_int_primary_exp();
@@ -189,18 +191,70 @@ TokenSP div_exp()
 }
 
 // TODO: ***** Add more functions around here somewhere *****
+/**
+ * @brief
+additive_exp can also be represented as 'div_exp {additive_operator div_exp}*'
+where * means zero or more instances of { additive_operator div_exp }
+
+
+	additive_exp 	: div_exp {additive_operator div_exp}*
+					;
+
+	int_additive_exp : int_div_exp {additive_operator int_div_exp}*
+					 ;
+
+	additive_operator : '+' | '-'
+					  ;
+ *
+ * @return TokenSP
+ */
+TokenSP additive_exp()
+{
+	TokenSP lowerNodeP{div_exp()};
+	if (lowerNodeP) {
+		std::cout << "[additive_exp] div_exp" << std::endl;
+		while (TokenSP upperNodeP{tokenObjectPs[tracker]->advance_past_additive_operator()}) {
+			if(TokenSP ueTreeP{div_exp()}) {
+				upperNodeP->add_childP(lowerNodeP);
+				upperNodeP->add_childP(ueTreeP);
+				lowerNodeP = upperNodeP;
+			}
+			else
+				return nullptr;
+		}
+	}
+	return lowerNodeP;
+}
+
+TokenSP int_additive_exp()
+{
+	TokenSP lowerNodeP{int_div_exp()};
+	if (lowerNodeP) {
+		std::cout << "[int_additive_exp] int_div_exp" << std::endl;
+		while (TokenSP upperNodeP{tokenObjectPs[tracker]->advance_past_additive_operator()}) {
+			if(TokenSP ueTreeP{int_div_exp()}) {
+				upperNodeP->add_childP(lowerNodeP);
+				upperNodeP->add_childP(ueTreeP);
+				lowerNodeP = upperNodeP;
+			}
+			else
+				return nullptr;
+		}
+	}
+	return lowerNodeP;
+}
 
 TokenSP shift_exp()
 {
 	// TODO: ***** Fix and complete this function
-	TokenSP lowerNodeP{int_div_exp()};
+	TokenSP lowerNodeP{int_additive_exp()};
 
 	if (lowerNodeP) {
 		std::cout << "[shift_exp] int_div_exp" << std::endl;
 		while (TokenSP upperNodeP{tokenObjectPs[tracker]->advance_past_shift_operator()})
 		{
 			// TODO: ***** Fix and complete this code
-			if(TokenSP subTreeP{int_div_exp()}) {
+			if(TokenSP subTreeP{int_additive_exp()}) {
 			// TODO: ***** complete this code
 				upperNodeP->add_childP(lowerNodeP);
 				upperNodeP->add_childP(subTreeP);
@@ -252,7 +306,7 @@ TokenSP ternary_exp()
 		tracker = old_tracker;
 		// TODO: ***** Fix and complete this function
 		std::cout << "[ternary_exp] div_exp" << std::endl;
-		subTreeP = div_exp();
+		subTreeP = additive_exp();
 	}
 	return subTreeP;
 }

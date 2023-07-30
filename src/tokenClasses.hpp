@@ -105,6 +105,7 @@ public:
 	virtual TokenSP advance_past_shift_operator() { return nullptr; }
 
 	// TODO: ***** you may need to add code here *****
+	virtual TokenSP advance_past_additive_operator() { return nullptr; }
 
 	virtual TokenSP advance_past_div_operator() { return nullptr; }
 	virtual TokenSP advance_past_mod_operator() { return nullptr; }
@@ -408,16 +409,17 @@ class additive_operator:public StringBasedToken
 public:
 	additive_operator(const std::string &opValue, int lineIndex, int posIndex): StringBasedToken(opValue, lineIndex, posIndex){ };
 	// TODO: ***** Complete this class if needed
-	TokenSP process_int_comp() override
-	{
-		TokenSP subTreeP;
-		if(process_token() && (subTreeP = int_comp_exp()))
-		{
-			add_childP(subTreeP);
-			return shared_from(this);
-		}
-		return nullptr;
-	}
+	TokenSP advance_past_additive_operator() { return process_token(); }
+//	TokenSP process_int_comp() override
+//	{
+//		TokenSP subTreeP;
+//		if(process_token() && (subTreeP = int_comp_exp()))
+//		{
+//			add_childP(subTreeP);
+//			return shared_from(this);
+//		}
+//		return nullptr;
+//	}
 };
 
 class div_operator:public StringBasedToken {	// '/'
