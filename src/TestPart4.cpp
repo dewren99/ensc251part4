@@ -35,6 +35,7 @@ void check(std::istream& input, std::istream& expectedOutput)
 			istringstream output(OUT.str());
 			while(output >> strOuput && expectedOutput >> strExpectedOutput)
 				if(strExpectedOutput!=strOuput){
+					std::cout << strExpectedOutput << " != " << strOuput << std::endl;
 					BOOST_ERROR("FAILED! \noutput not matched in ("+strOuput+")");
 					break;
 				}

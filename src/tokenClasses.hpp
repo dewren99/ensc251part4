@@ -264,6 +264,70 @@ public:
 	type_spec(): StringBasedToken("int", 0, 0) { };
 	type_spec(const std::string &typeValue, int lineIndex, int posIndex): StringBasedToken(typeValue, lineIndex, posIndex){ };
 	// TODO: ***** Complete this class
+	TokenSP process_declaration() override
+	{
+		if(process_token())
+		{
+			if(TokenSP tObjP{tokenObjectPs[tracker]->process_id()})
+			{
+				add_childP(tObjP);
+				return shared_from(this);
+			}
+		}
+		return nullptr;
+	}
+
+	TokenSP process_pointer_primary_exp() override
+	{
+		if(process_token())
+		{
+			if(TokenSP tObjP{tokenObjectPs[tracker]->process_id()})
+			{
+				add_childP(tObjP);
+				return shared_from(this);
+			}
+		}
+		return nullptr;
+	}
+
+	TokenSP process_int_primary_exp() override
+	{
+		if(process_token())
+		{
+			if(TokenSP tObjP{tokenObjectPs[tracker]->process_id()})
+			{
+				add_childP(tObjP);
+				return shared_from(this);
+			}
+		}
+		return nullptr;
+	}
+
+	TokenSP process_int_comp() override
+	{
+		if(process_token())
+		{
+			if(TokenSP tObjP{tokenObjectPs[tracker]->process_id()})
+			{
+				add_childP(tObjP);
+				return shared_from(this);
+			}
+		}
+		return nullptr;
+	}
+
+	TokenSP process_int_id() override
+	{
+		if(process_token())
+		{
+			if(TokenSP tObjP{tokenObjectPs[tracker]->process_id()})
+			{
+				add_childP(tObjP);
+				return shared_from(this);
+			}
+		}
+		return nullptr;
+	}
 };
 
 class id:public StringBasedToken
@@ -343,6 +407,16 @@ class additive_operator:public StringBasedToken
 public:
 	additive_operator(const std::string &opValue, int lineIndex, int posIndex): StringBasedToken(opValue, lineIndex, posIndex){ };
 	// TODO: ***** Complete this class if needed
+	TokenSP process_int_comp() override
+	{
+		TokenSP subTreeP;
+		if(process_token() && (subTreeP = int_comp_exp()))
+		{
+			add_childP(subTreeP);
+			return shared_from(this);
+		}
+		return nullptr;
+	}
 };
 
 class div_operator:public StringBasedToken {	// '/'

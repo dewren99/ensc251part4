@@ -299,7 +299,7 @@ vector<shared_ptr<Token> > tokenClassifier(istream& code)
 
 	 	 	lineNumber++;
 	 	 }
-
+	 	std::cout << "tokenObjectPs len: " << tokenObjectPs.size() << std::endl;
         return tokenObjectPs;
 }
 

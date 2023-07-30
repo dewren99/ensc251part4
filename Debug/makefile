@@ -38,7 +38,7 @@ $(wildcard ../makefile.init) \
 $(wildcard ../makefile.targets) \
 
 
-BUILD_ARTIFACT_NAME := Part4
+BUILD_ARTIFACT_NAME := ensc251part4
 BUILD_ARTIFACT_EXTENSION :=
 BUILD_ARTIFACT_PREFIX :=
 BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ARTIFACT_EXTENSION),.$(BUILD_ARTIFACT_EXTENSION),)
@@ -49,19 +49,19 @@ BUILD_ARTIFACT := $(BUILD_ARTIFACT_PREFIX)$(BUILD_ARTIFACT_NAME)$(if $(BUILD_ART
 all: main-build
 
 # Main-build Target
-main-build: Part4
+main-build: ensc251part4
 
 # Tool invocations
-Part4: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
+ensc251part4: $(OBJS) $(USER_OBJS) makefile $(OPTIONAL_TOOL_DEPS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	g++  -o "Part4" $(OBJS) $(USER_OBJS) $(LIBS) -lfmt -lboost_unit_test_framework
+	g++  -o "ensc251part4" $(OBJS) $(USER_OBJS) $(LIBS) -lfmt -lboost_unit_test_framework
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
-	-$(RM) Part4
+	-$(RM) ensc251part4
 	-@echo ' '
 
 .PHONY: all clean dependents main-build

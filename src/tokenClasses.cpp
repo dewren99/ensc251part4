@@ -50,11 +50,41 @@ char *demangle(const char *typeName) {
 	return abi::__cxa_demangle(typeName, 0, 0, &status);
 }
 
+/**
+ * @brief postfix_exp first checks for an id followed by a postfix_operator.
+ * If there exists a postfix operator then it becomes the root of the subtree with id as a child.
+ * If not exist check for the primary expression and retrieving its sub tree.
+
+	postfix_exp : id postfix_operator
+				| primary_exp
+				;
+
+	int_postfix_exp : int_id postfix_operator
+					| int_primary_exp
+					;
+
+	postfix_operator : '++' | '--'
+					 ;
+ *
+ * @return TokenSP
+ */
 TokenSP postfix_exp()
 {
 	// TODO: ***** Complete this function
 
 	auto subTreeP{tokenObjectPs[tracker]->process_id()};
+	if(subTreeP)
+	{
+		if(TokenSP tObjP{tokenObjectPs[tracker]->process_postfix_operator()})
+		{
+			tObjP->add_childP(subTreeP);
+			return tObjP;
+		}
+		else
+			return nullptr;
+	}
+
+	subTreeP = tokenObjectPs[tracker]->process_primary_exp();
 	// TODO: ***** Complete this function
 	return subTreeP;
 }
@@ -62,12 +92,22 @@ TokenSP postfix_exp()
 TokenSP int_postfix_exp()
 {
 	// TODO: ***** Complete this function
+	auto subTreeP{tokenObjectPs[tracker]->process_int_id()};
+	if(subTreeP)
+	{
+		if(TokenSP tObjP{tokenObjectPs[tracker]->process_postfix_operator()})
+		{
+			tObjP->add_childP(subTreeP);
+				return tObjP;
+		}
+		else
+			return nullptr;
+	}
 
-	auto subTreeP = tokenObjectPs[tracker]->
+	subTreeP = tokenObjectPs[tracker]->
 	// TODO: ***** Complete this function
 											process_int_primary_exp();
 	//};
-	
 	return subTreeP;
 }
 
@@ -89,8 +129,9 @@ TokenSP int_comp_exp()
 	std::size_t old_tracker{tracker};
 
 	TokenSP tObjP{tokenObjectPs[tracker]->process_int_comp()};
-
+	std::cout << "[int_comp_exp] process_int_comp" << std::endl;
 	if(!tObjP) {
+		std::cout << "[int_comp_exp] int_postfix_exp" << std::endl;
 		tracker = old_tracker;
 		tObjP = int_postfix_exp();
 	}
@@ -101,6 +142,7 @@ TokenSP int_div_exp()
 {
 	TokenSP lowerNodeP{int_comp_exp()};
 	if (lowerNodeP) {
+		std::cout << "[int_div_exp] int_comp_exp" << std::endl;
 		for (TokenSP upperNodeP{nullptr};
 				(upperNodeP = tokenObjectPs[tracker]->advance_past_div_operator()) ||
 				(upperNodeP = tokenObjectPs[tracker]->advance_past_mod_operator());)
@@ -121,6 +163,7 @@ TokenSP div_exp()
 
 	TokenSP lowerNodeP{comp_exp()};
 	if (lowerNodeP) {
+		std::cout << "[div_exp] comp_exp" << std::endl;
 		while (TokenSP upperNodeP{tokenObjectPs[tracker]->advance_past_div_operator()}) {
 			if(TokenSP ueTreeP{comp_exp()}) {
 				upperNodeP->add_childP(lowerNodeP);
@@ -132,6 +175,7 @@ TokenSP div_exp()
 		}
 	}
 	else {
+		std::cout << "[div_exp] int_div_exp" << std::endl;
 		tracker = old_tracker;
 		lowerNodeP = int_div_exp();
 	}
@@ -147,11 +191,15 @@ TokenSP shift_exp()
 	TokenSP lowerNodeP{int_div_exp()};
 
 	if (lowerNodeP) {
+		std::cout << "[shift_exp] int_div_exp" << std::endl;
 		while (TokenSP upperNodeP{tokenObjectPs[tracker]->advance_past_shift_operator()})
 		{
 			// TODO: ***** Fix and complete this code
 			if(TokenSP subTreeP{int_div_exp()}) {
 			// TODO: ***** complete this code
+				upperNodeP->add_childP(lowerNodeP);
+				upperNodeP->add_childP(subTreeP);
+				lowerNodeP = upperNodeP;
 			}
 			else
 				return nullptr;
@@ -166,7 +214,31 @@ TokenSP ternary_exp()
 	TokenSP subTreeP    ;
 
 	// TODO: ***** Complete this function
+	if((subTreeP = tokenObjectPs[tracker]->process_id()))
+	{
+		std::cout << "[ternary_exp] id '?' assignment_exp ':' ternary_exp" << std::endl;
+		if(TokenSP tObjP{tokenObjectPs[tracker]->advance_past_conditional_operator()})
+		{
+			tObjP->add_childP(subTreeP);
+			subTreeP = assignment_exp();
+			if(subTreeP)
+			{
+				tObjP->add_childP(subTreeP);
+				if(tokenObjectPs[tracker]->process_punctuator(":"))
+				{
+					subTreeP = ternary_exp();
+					if(subTreeP)
+					{
+						tObjP->add_childP(subTreeP);
+						return tObjP;
+					}
+				}
+			}
+			return nullptr;
+		}
+	}
 
+	std::cout << "[ternary_exp] shift_exp" << std::endl;
 	tracker = old_tracker;
 	subTreeP = shift_exp();
 
@@ -174,6 +246,7 @@ TokenSP ternary_exp()
 	{
 		tracker = old_tracker;
 		// TODO: ***** Fix and complete this function
+		std::cout << "[ternary_exp] div_exp" << std::endl;
 		subTreeP = div_exp();
 	}
 	return subTreeP;
@@ -218,6 +291,7 @@ TokenSP assignment_exp()
 	TokenSP subTreeP{tokenObjectPs[tracker]->process_int_id()};
 	if(subTreeP)
 	{
+		std::cout << "[assignment_exp] int_id int_assignment_operator int_assignment_exp" << std::endl;
 		if(TokenSP tObjP{tokenObjectPs[tracker]->advance_past_int_assignment_operator()})
 		{
 			tObjP->add_childP(subTreeP);
@@ -235,6 +309,7 @@ TokenSP assignment_exp()
 	tracker = old_tracker;
 	if ((subTreeP = tokenObjectPs[tracker]->process_id()))
 	{
+		std::cout << "[assignment_exp] id gen_assignment_operator assignment_exp" << std::endl;
 		if(TokenSP tObjP{tokenObjectPs[tracker]->advance_past_gen_assignment_operator()})
 		{
 			tObjP->add_childP(subTreeP);
@@ -251,12 +326,15 @@ TokenSP assignment_exp()
 		// no assignment operator, so this is not this production
 
 		// start production:  ternary_exp
-		if(tokenObjectPs[tracker]->has_string_value(";"))
+		if(tokenObjectPs[tracker]->has_string_value(";")){
+			std::cout << "[assignment_exp] ternary_exp, we have already processed an id" << std::endl;
 			// we have already processed an id, which satisfies the ternary_exp production.
 			return subTreeP;
+		}
 	}
 
 	// production:  ternary_exp
+	std::cout << "[assignment_exp] ternary_exp" << std::endl;
 	tracker = old_tracker;
 	return ternary_exp();
 }
@@ -300,10 +378,14 @@ TokenSP int_assignment_exp()
 
 TokenSP stat()
 {
-	if(auto subTreeP{tokenObjectPs[tracker]->process_declaration()})
+	if(auto subTreeP{tokenObjectPs[tracker]->process_declaration()}){
+		std::cout << "processing it as declaration" << std::endl;
 		return subTreeP;
-	else
+	}
+	else {
+		std::cout << "processing it as assignment expression" << std::endl;
 		return assignment_exp();
+	}
 }
 
 // because the below function deals with ";", it is a bit different than the pattern seen elsewhere.
