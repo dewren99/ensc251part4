@@ -84,34 +84,36 @@ public:
 				" : " << this->getStringValue();
 	}
 
-	virtual TokenSP process_punctuator(const std::string &puncValue) { return nullptr; }
-	virtual TokenSP process_declaration() { return nullptr; }
+	virtual TokenSP process_punctuator(const std::string &puncValue) {
+		std::cout << "[process_punctuator] nullptr" << std::endl;
+		return nullptr; }
+	virtual TokenSP process_declaration() { std::cout << "[process_declaration] nullptr" << std::endl; return nullptr; }
 
-	virtual TokenSP process_id() { return nullptr; }
-	virtual TokenSP process_primary_exp() { return nullptr; }
+	virtual TokenSP process_id() { std::cout << "[process_id] nullptr" << std::endl; return nullptr; }
+	virtual TokenSP process_primary_exp() { std::cout << "[process_primary_exp] nullptr" << std::endl; return nullptr; }
 
-	virtual TokenSP process_pointer_primary_exp() { return nullptr; } // remove ?
+	virtual TokenSP process_pointer_primary_exp() { std::cout << "[process_pointer_primary_exp] nullptr" << std::endl; return nullptr; } // remove ?
 
-	TokenSP process_numeric_id()	{ return process_id(); }          
-	virtual TokenSP process_numeric_primary_exp() { return nullptr; }
+	TokenSP process_numeric_id()	{ std::cout << "[process_numeric_id] nullptr" << std::endl; return process_id(); }
+	virtual TokenSP process_numeric_primary_exp() { std::cout << "[process_numeric_primary_exp] nullptr" << std::endl; return nullptr; }
 
-	virtual TokenSP process_int_id() { return nullptr; }
-	virtual TokenSP process_int_primary_exp() { return nullptr; }
+	virtual TokenSP process_int_id() { std::cout << "[process_int_id] nullptr" << std::endl; return nullptr; }
+	virtual TokenSP process_int_primary_exp() { std::cout << "[process_int_primary_exp] nullptr" << std::endl; return nullptr; }
 
-	virtual TokenSP process_int_comp() { return nullptr; }
-	virtual TokenSP process_postfix_operator() { return nullptr; }
+	virtual TokenSP process_int_comp() { std::cout << "[process_int_comp] nullptr" << std::endl; return nullptr; }
+	virtual TokenSP process_postfix_operator() { std::cout << "[process_postfix_operator] nullptr" << std::endl; return nullptr; }
 
-	virtual TokenSP advance_past_conditional_operator() { return nullptr; }
-	virtual TokenSP advance_past_shift_operator() { return nullptr; }
+	virtual TokenSP advance_past_conditional_operator() { std::cout << "[advance_past_conditional_operator] nullptr" << std::endl; return nullptr; }
+	virtual TokenSP advance_past_shift_operator() { std::cout << "[advance_past_shift_operator] nullptr" << std::endl; return nullptr; }
 
 	// TODO: ***** you may need to add code here *****
-	virtual TokenSP advance_past_additive_operator() { return nullptr; }
+	virtual TokenSP advance_past_additive_operator() { std::cout << "[advance_past_additive_operator] nullptr" << std::endl; return nullptr; }
 
-	virtual TokenSP advance_past_div_operator() { return nullptr; }
-	virtual TokenSP advance_past_mod_operator() { return nullptr; }
+	virtual TokenSP advance_past_div_operator() { std::cout << "[advance_past_div_operator] nullptr" << std::endl; return nullptr; }
+	virtual TokenSP advance_past_mod_operator() { std::cout << "[advance_past_mod_operator] nullptr" << std::endl; return nullptr; }
 
-	virtual TokenSP advance_past_gen_assignment_operator() { return nullptr; }
-	virtual TokenSP advance_past_int_assignment_operator() { return nullptr; }
+	virtual TokenSP advance_past_gen_assignment_operator() { std::cout << "[advance_past_gen_assignment_operator] nullptr" << std::endl; return nullptr; }
+	virtual TokenSP advance_past_int_assignment_operator() { std::cout << "[advance_past_int_assignment_operator] nullptr" << std::endl; return nullptr; }
 
 	TokenSP process_token()
 	{
@@ -410,16 +412,16 @@ public:
 	additive_operator(const std::string &opValue, int lineIndex, int posIndex): StringBasedToken(opValue, lineIndex, posIndex){ };
 	// TODO: ***** Complete this class if needed
 	TokenSP advance_past_additive_operator() { return process_token(); }
-//	TokenSP process_int_comp() override
-//	{
-//		TokenSP subTreeP;
-//		if(process_token() && (subTreeP = int_comp_exp()))
-//		{
-//			add_childP(subTreeP);
-//			return shared_from(this);
-//		}
-//		return nullptr;
-//	}
+	TokenSP process_int_comp() override
+	{
+		TokenSP subTreeP;
+		if(process_token() && (subTreeP = int_comp_exp()))
+		{
+			add_childP(subTreeP);
+			return shared_from(this);
+		}
+		return nullptr;
+	}
 };
 
 class div_operator:public StringBasedToken {	// '/'
