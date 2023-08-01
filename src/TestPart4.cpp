@@ -175,3 +175,84 @@ BOOST_AUTO_TEST_CASE(testE4)
 	istringstream expectedOutput ("SyntaxError");
 	check(input, expectedOutput);
 }
+
+
+
+
+
+
+
+
+// Additional
+
+BOOST_AUTO_TEST_CASE(test_simple_int_assignment)
+{
+	istringstream input("int var; var = 10;");
+	istringstream expectedOutput("int var ; var = 10 ;");
+	check(input, expectedOutput);
+}
+
+BOOST_AUTO_TEST_CASE(test_float_expression)
+{
+	istringstream input("float val; val = 5.5 + 2.2;");
+	istringstream expectedOutput("float val ; val = 5.5 + 2.2 ;");
+	check(input, expectedOutput);
+}
+
+BOOST_AUTO_TEST_CASE(test_ternary_operation)
+{
+	istringstream input("int x; x = errno ? 1 : 0;");
+	istringstream expectedOutput("int x ; x = errno ? 1 : 0 ;");
+	check(input, expectedOutput);
+}
+
+BOOST_AUTO_TEST_CASE(test_shift_operator)
+{
+	istringstream input("int num; num <<= 2;");
+	istringstream expectedOutput("int num ; num <<= 2 ;");
+	check(input, expectedOutput);
+}
+
+BOOST_AUTO_TEST_CASE(test_complex_expression)
+{
+	istringstream input("int var; var = (5 + 6 / 2) / 2;");
+	istringstream expectedOutput("int var ; var = ( 5 + 6 / 2 ) / 2 ;");
+	check(input, expectedOutput);
+}
+
+// Syntax Error
+BOOST_AUTO_TEST_CASE(test_missing_semicolon)
+{
+	istringstream input("int var var = 10");
+	istringstream expectedOutput("SyntaxError");
+	check(input, expectedOutput);
+}
+
+BOOST_AUTO_TEST_CASE(test_unsupported_operator)
+{
+	istringstream input("int x; x ^= 2;");
+	istringstream expectedOutput("SyntaxError");
+	check(input, expectedOutput);
+}
+
+BOOST_AUTO_TEST_CASE(test_misplaced_parentheses)
+{
+	istringstream input("int var; var = (5 + 6) * 2 / 2;");
+	istringstream expectedOutput("SyntaxError");
+	check(input, expectedOutput);
+}
+
+BOOST_AUTO_TEST_CASE(test_invalid_variable_name)
+{
+	istringstream input("int 123var; 123var = 10;");
+	istringstream expectedOutput("SyntaxError");
+	check(input, expectedOutput);
+}
+
+//BOOST_AUTO_TEST_CASE(test_invalid_type_declaration)
+//{
+//	istringstream input("str var; var = 'hello';");
+//	istringstream expectedOutput("SyntaxError");
+//	check(input, expectedOutput);
+//}
+

@@ -85,7 +85,6 @@ public:
 	}
 
 	virtual TokenSP process_punctuator(const std::string &puncValue) {
-		std::cout << "[process_punctuator] nullptr" << std::endl;
 		return nullptr; }
 	virtual TokenSP process_declaration() { std::cout << "[process_declaration] nullptr" << std::endl; return nullptr; }
 

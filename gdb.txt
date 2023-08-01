@@ -138,73 +138,149 @@
 (gdb) 
 78^done
 (gdb) 
-nitor.ipp",fullname="/usr/include/boost/test/impl/execution_monitor.ipp",line="903",arch="i386:x86-64"},frame={level="20",addr="0x00007ffff7f4848f",func="boost::execution_monitor::execute(boost::function<int ()> const&)",file="./boost/test/impl/execution_monitor.ipp",fullname="/usr/include/boost/test/impl/execution_monitor.ipp",line="1301",arch="i386:x86-64"},frame={level="21",addr="0x00007ffff7f48575",func="boost::execution_monitor::vexecute(boost::function<void ()> const&)",file="./boost/test/impl/execution_monitor.ipp",fullname="/usr/include/boost/test/impl/execution_monitor.ipp",line="1397",arch="i386:x86-64"},frame={level="22",addr="0x00007ffff7f660a1",func="boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::function<void ()> const&, unsigned long)",file="./boost/test/impl/unit_test_monitor.ipp",fullname="/usr/include/boost/test/impl/unit_test_monitor.ipp",line="49",arch="i386:x86-64"},frame={level="23",addr="0x00007ffff7f866b1",func="boost::unit_test::framework::state::execute_test_tree(unsigned long, unsigned long, boost::unit_test::framework::state::random_generator_helper const*) [clone .constprop.0]",file="./boost/test/impl/framework.ipp",fullname="/usr/include/boost/test/impl/framework.ipp",line="815",arch="i386:x86-64"},frame={level="24",addr="0x00007ffff7f86a3d",func="boost::unit_test::framework::state::execute_test_tree(unsigned long, unsigned long, boost::unit_test::framework::state::random_generator_helper const*) [clone .constprop.0]",file="./boost/test/impl/framework.ipp",fullname="/usr/include/boost/test/impl/framework.ipp",line="740",arch="i386:x86-64"},frame={level="25",addr="0x00007ffff7f5040c",func="boost::unit_test::framework::run",file="./boost/test/impl/framework.ipp",fullname="/usr/include/boost/test/impl/framework.ipp",line="1721",arch="i386:x86-64"},frame={level="26",addr="0x00007ffff7f65843",func="boost::unit_test::unit_test_main",file="./boost/test/impl/unit_test_main.ipp",fullname="/usr/include/boost/test/impl/unit_test_main.ipp",line="250",arch="i386:x86-64"},frame={level="27",addr="0x000055555555e934",func="main",file="/usr/include/boost/test/unit_test.hpp",fullname="/usr/include/boost/test/unit_test.hpp",line="64",arch="i386:x86-64"}]
+&"No line 514 in file \"/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp\".\n"
+79^done,bkpt={number="19",type="breakpoint",disp="keep",enabled="y",addr="<PENDING>",pending="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:514",times="0",original-location="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:514"}
 (gdb) 
-58^running
-*running,thread-id="all"
+80^done
 (gdb) 
-=breakpoint-modified,bkpt={number="3",type="breakpoint",disp="keep",enabled="y",addr="0x000055555555ea0c",func="check(std::istream&, std::istream&)",file="../src/TestPart4.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/TestPart4.cpp",line="31",thread-groups=["i1"],times="1",original-location="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/TestPart4.cpp:31"}
-~"\n"
-~"Breakpoint 3, check (input=..., expectedOutput=...) at ../src/TestPart4.cpp:31\n"
-~"31\t\t\tif(ast_root)\n"
-*stopped,reason="breakpoint-hit",disp="keep",bkptno="3",frame={addr="0x000055555555ea0c",func="check",args=[{name="input",value="..."},{name="expectedOutput",value="..."}],file="../src/TestPart4.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/TestPart4.cpp",line="31",arch="i386:x86-64"},thread-id="1",stopped-threads="all",core="2"
-59^error,msg="-var-create: unable to create variable object"
+&"No line 513 in file \"/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp\".\n"
+81^done,bkpt={number="20",type="breakpoint",disp="keep",enabled="y",addr="<PENDING>",pending="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:513",times="0",original-location="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:513"}
 (gdb) 
-60^error,msg="-var-create: unable to create variable object"
+82^done
 (gdb) 
-61^done,new-thread-id="1",frame={level="0",addr="0x000055555555ea0c",func="check",args=[{name="input",value="..."},{name="expectedOutput",value="..."}],file="../src/TestPart4.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/TestPart4.cpp",line="31",arch="i386:x86-64"}
+&"No line 512 in file \"/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp\".\n"
+83^done,bkpt={number="21",type="breakpoint",disp="keep",enabled="y",addr="<PENDING>",pending="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:512",times="0",original-location="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:512"}
 (gdb) 
-62^done,depth="11"
+84^done
 (gdb) 
-63^done
+&"No line 511 in file \"/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp\".\n"
+85^done,bkpt={number="22",type="breakpoint",disp="keep",enabled="y",addr="<PENDING>",pending="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:511",times="0",original-location="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:511"}
 (gdb) 
-64^done,groups=[{id="i1",type="process",pid="20255",executable="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/Debug/ensc251part4",cores=["2"]}]
+86^done
 (gdb) 
-65^done,threads=[{id="1",target-id="Thread 0x7ffff7ef6740 (LWP 20255)",name="ensc251part4",frame={level="0",addr="0x000055555555ea0c",func="check",args=[{name="input",value="..."},{name="expectedOutput",value="..."}],file="../src/TestPart4.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/TestPart4.cpp",line="31",arch="i386:x86-64"},state="stopped",core="2"}]
+&"No line 510 in file \"/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp\".\n"
+87^done,bkpt={number="23",type="breakpoint",disp="keep",enabled="y",addr="<PENDING>",pending="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:510",times="0",original-location="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:510"}
 (gdb) 
-66^done,locals=[{name="ast_root",value="std::shared_ptr<ensc251::Token> (use count 2, weak count 1) = {get() = 0x5555555e4080}"},{name="strExpectedOutput",value="\"\""}]
+88^done
 (gdb) 
-67^done,stack=[frame={level="0",addr="0x000055555555ea0c",func="check",file="../src/TestPart4.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/TestPart4.cpp",line="31",arch="i386:x86-64"},frame={level="1",addr="0x000055555555f7e5",func="test1::test_method",file="../src/TestPart4.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/TestPart4.cpp",line="62",arch="i386:x86-64"},frame={level="2",addr="0x000055555555f41e",func="test1_invoker",file="../src/TestPart4.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/TestPart4.cpp",line="58",arch="i386:x86-64"},frame={level="3",addr="0x000055555556bc41",func="boost::detail::function::void_function_invoker0<void (*)(), void>::invoke",file="/usr/include/boost/function/function_template.hpp",fullname="/usr/include/boost/function/function_template.hpp",line="117",arch="i386:x86-64"},frame={level="4",addr="0x00007ffff7f41fa2",func="boost::function0<void>::operator()",file="./boost/function/function_template.hpp",fullname="/usr/include/boost/function/function_template.hpp",line="763",arch="i386:x86-64"},frame={level="5",addr="0x00007ffff7f41fa2",func="boost::detail::forward::operator()",file="./boost/test/impl/execution_monitor.ipp",fullname="/usr/include/boost/test/impl/execution_monitor.ipp",line="1388",arch="i386:x86-64"},frame={level="6",addr="0x00007ffff7f41fa2",func="boost::detail::function::function_obj_invoker0<boost::detail::forward, int>::invoke",file="./boost/function/function_template.hpp",fullname="/usr/include/boost/function/function_template.hpp",line="137",arch="i386:x86-64"},frame={level="7",addr="0x00007ffff7f48019",func="boost::function0<int>::operator()",file="./boost/function/function_template.hpp",fullname="/usr/include/boost/function/function_template.hpp",line="763",arch="i386:x86-64"},frame={level="8",addr="0x00007ffff7f48019",func="boost::detail::do_invoke<boost::shared_ptr<boost::detail::translator_holder_base>, boost::function<int ()> >(boost::shared_ptr<boost::detail::translator_holder_base> const&, boost::function<int ()> const&)",file="./boost/test/impl/execution_monitor.ipp",fullname="/usr/include/boost/test/impl/execution_monitor.ipp",line="301",arch="i386:x86-64"},frame={level="9",addr="0x00007ffff7f48019",func="boost::execution_monitor::catch_signals(boost::function<int ()> const&)",file="./boost/test/impl/execution_monitor.ipp",fullname="/usr/include/boost/test/impl/execution_monitor.ipp",line="903",arch="i386:x86-64"},frame={level="10",addr="0x00007ffff7f4848f",func="boost::execution_monitor::execute(boost::function<int ()> const&)",file="./boost/test/impl/execution_monitor.ipp",fullname="/usr/include/boost/test/impl/execution_monitor.ipp",line="1301",arch="i386:x86-64"},frame={level="11",addr="0x00007ffff7f48575",func="boost::execution_monitor::vexecute(boost::function<void ()> const&)",file="./boost/test/impl/execution_monitor.ipp",fullname="/usr/include/boost/test/impl/execution_monitor.ipp",line="1397",arch="i386:x86-64"},frame={level="12",addr="0x00007ffff7f660a1",func="boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::function<void ()> const&, unsigned long)",file="./boost/test/impl/unit_test_monitor.ipp",fullname="/usr/include/boost/test/impl/unit_test_monitor.ipp",line="49",arch="i386:x86-64"},frame={level="13",addr="0x00007ffff7f866b1",func="boost::unit_test::framework::state::execute_test_tree(unsigned long, unsigned long, boost::unit_test::framework::state::random_generator_helper const*) [clone .constprop.0]",file="./boost/test/impl/framework.ipp",fullname="/usr/include/boost/test/impl/framework.ipp",line="815",arch="i386:x86-64"},frame={level="14",addr="0x00007ffff7f86a3d",func="boost::unit_test::framework::state::execute_test_tree(unsigned long, unsigned long, boost::unit_test::framework::state::random_generator_helper const*) [clone .constprop.0]",file="./boost/test/impl/framework.ipp",fullname="/usr/include/boost/test/impl/framework.ipp",line="740",arch="i386:x86-64"},frame={level="15",addr="0x00007ffff7f5040c",func="boost::unit_test::framework::run",file="./boost/test/impl/framework.ipp",fullname="/usr/include/boost/test/impl/framework.ipp",line="1721",arch="i386:x86-64"},frame={level="16",addr="0x00007ffff7f65843",func="boost::unit_test::unit_test_main",file="./boost/test/impl/unit_test_main.ipp",fullname="/usr/include/boost/test/impl/unit_test_main.ipp",line="250",arch="i386:x86-64"},frame={level="17",addr="0x000055555555e934",func="main",file="/usr/include/boost/test/unit_test.hpp",fullname="/usr/include/boost/test/unit_test.hpp",line="64",arch="i386:x86-64"}]
+&"No line 509 in file \"/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp\".\n"
+89^done,bkpt={number="24",type="breakpoint",disp="keep",enabled="y",addr="<PENDING>",pending="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:509",times="0",original-location="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:509"}
 (gdb) 
-68^done,depth="18"
+90^done
 (gdb) 
-69^done,name="var5",numchild="2",value="{...}",type="std::__cxx11::basic_istringstream<char, std::char_traits<char>, std::allocator<char> > &",thread-id="1",has_more="0"
+&"No line 508 in file \"/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp\".\n"
+91^done,bkpt={number="25",type="breakpoint",disp="keep",enabled="y",addr="<PENDING>",pending="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:508",times="0",original-location="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:508"}
 (gdb) 
-70^done,name="var6",numchild="2",value="{...}",type="std::__cxx11::basic_istringstream<char, std::char_traits<char>, std::allocator<char> > &",thread-id="1",has_more="0"
+92^done
 (gdb) 
-71^done,name="var7",numchild="0",value="{...}",type="std::shared_ptr<ensc251::Token>",thread-id="1",dynamic="1",has_more="1"
+&"No line 507 in file \"/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp\".\n"
+93^done,bkpt={number="26",type="breakpoint",disp="keep",enabled="y",addr="<PENDING>",pending="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:507",times="0",original-location="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:507"}
 (gdb) 
-72^done,name="var8",numchild="0",value="\"\"",type="std::string",thread-id="1",displayhint="string",dynamic="1",has_more="0"
+94^done
 (gdb) 
-73^running
-*running,thread-id="all"
+&"No line 506 in file \"/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp\".\n"
+95^done,bkpt={number="27",type="breakpoint",disp="keep",enabled="y",addr="<PENDING>",pending="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:506",times="0",original-location="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:506"}
 (gdb) 
-74^done,numchild="1",children=[child={name="var7.get()",exp="get()",numchild="3",type="ensc251::TreeNode *",thread-id="1"}],has_more="0"
+96^done
 (gdb) 
-=breakpoint-modified,bkpt={number="2",type="breakpoint",disp="keep",enabled="y",addr="0x000055555556c903",func="ensc251::int_comp_exp()",file="../src/tokenClasses.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp",line="145",thread-groups=["i1"],times="2",original-location="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:145"}
-~"\n"
-~"Breakpoint 2, ensc251::int_comp_exp () at ../src/tokenClasses.cpp:145\n"
-~"145\t\tTokenSP tObjP{tokenObjectPs[tracker]->process_int_comp()};\n"
-*stopped,reason="breakpoint-hit",disp="keep",bkptno="2",frame={addr="0x000055555556c903",func="ensc251::int_comp_exp",args=[],file="../src/tokenClasses.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp",line="145",arch="i386:x86-64"},thread-id="1",stopped-threads="all",core="2"
-75^done,groups=[{id="i1",type="process",pid="20255",executable="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/Debug/ensc251part4",cores=["2"]}]
+&"No line 505 in file \"/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp\".\n"
+97^done,bkpt={number="28",type="breakpoint",disp="keep",enabled="y",addr="<PENDING>",pending="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:505",times="0",original-location="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:505"}
 (gdb) 
-76^done,locals=[{name="old_tracker",value="5"},{name="tObjP",value="std::shared_ptr<ensc251::Token> (use count 1220870472, weak count 1400822660) = {get() = 0x1}"}]
+98^done
 (gdb) 
-77^done,depth="11"
+&"No line 504 in file \"/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp\".\n"
+99^done,bkpt={number="29",type="breakpoint",disp="keep",enabled="y",addr="<PENDING>",pending="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:504",times="0",original-location="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:504"}
 (gdb) 
-78^done
+100^done
 (gdb) 
-79^done,depth="28"
+&"No line 503 in file \"/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp\".\n"
+101^done,bkpt={number="30",type="breakpoint",disp="keep",enabled="y",addr="<PENDING>",pending="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:503",times="0",original-location="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:503"}
 (gdb) 
-80^done,threads=[{id="1",target-id="Thread 0x7ffff7ef6740 (LWP 20255)",name="ensc251part4",frame={level="0",addr="0x000055555556c903",func="ensc251::int_comp_exp",args=[],file="../src/tokenClasses.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp",line="145",arch="i386:x86-64"},state="stopped",core="2"}]
+102^done
 (gdb) 
-81^done,name="var9",numchild="0",value="5",type="std::size_t",thread-id="1",has_more="0"
+&"No line 502 in file \"/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp\".\n"
+103^done,bkpt={number="31",type="breakpoint",disp="keep",enabled="y",addr="<PENDING>",pending="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:502",times="0",original-location="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:502"}
 (gdb) 
-82^done,name="var10",numchild="0",value="{...}",type="ensc251::TokenSP",thread-id="1",dynamic="1",has_more="1"
+104^done
 (gdb) 
-83^done,numchild="1",children=[child={name="var10.get()",exp="get()",numchild="3",type="std::__shared_ptr<ensc251::Token, (__gnu_cxx::_Lock_policy)2>::element_type *",thread-id="1"}],has_more="0"
+&"No line 501 in file \"/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp\".\n"
+105^done,bkpt={number="32",type="breakpoint",disp="keep",enabled="y",addr="<PENDING>",pending="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:501",times="0",original-location="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:501"}
 (gdb) 
-84^done,stack=[frame={level="0",addr="0x000055555556c903",func="ensc251::int_comp_exp",file="../src/tokenClasses.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp",line="145",arch="i386:x86-64"},frame={level="1",addr="0x000055555556cb31",func="ensc251::int_div_exp",file="../src/tokenClasses.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp",line="158",arch="i386:x86-64"},frame={level="2",addr="0x000055555556d475",func="ensc251::int_additive_exp",file="../src/tokenClasses.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp",line="239",arch="i386:x86-64"},frame={level="3",addr="0x000055555556d7f1",func="ensc251::shift_exp",file="../src/tokenClasses.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp",line="260",arch="i386:x86-64"},frame={level="4",addr="0x000055555556de62",func="ensc251::ternary_exp",file="../src/tokenClasses.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp",line="312",arch="i386:x86-64"},frame={level="5",addr="0x000055555556eae1",func="ensc251::assignment_exp",file="../src/tokenClasses.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp",line="410",arch="i386:x86-64"},frame={level="6",addr="0x000055555556e89a",func="ensc251::assignment_exp",file="../src/tokenClasses.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp",line="387",arch="i386:x86-64"},frame={level="7",addr="0x000055555556f26c",func="ensc251::stat",file="../src/tokenClasses.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp",line="461",arch="i386:x86-64"},frame={level="8",addr="0x000055555556f393",func="ensc251::stat_list",file="../src/tokenClasses.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp",line="476",arch="i386:x86-64"},frame={level="9",addr="0x000055555556f7e7",func="ensc251::recursive_parser",file="../src/tokenClasses.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp",line="490",arch="i386:x86-64"},frame={level="10",addr="0x000055555555ea0c",func="check",file="../src/TestPart4.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/TestPart4.cpp",line="30",arch="i386:x86-64"},frame={level="11",addr="0x000055555555ff89",func="test2::test_method",file="../src/TestPart4.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/TestPart4.cpp",line="70",arch="i386:x86-64"},frame={level="12",addr="0x000055555555fbc3",func="test2_invoker",file="../src/TestPart4.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/TestPart4.cpp",line="65",arch="i386:x86-64"},frame={level="13",addr="0x000055555556bc41",func="boost::detail::function::void_function_invoker0<void (*)(), void>::invoke",file="/usr/include/boost/function/function_template.hpp",fullname="/usr/include/boost/function/function_template.hpp",line="117",arch="i386:x86-64"},frame={level="14",addr="0x00007ffff7f41fa2",func="boost::function0<void>::operator()",file="./boost/function/function_template.hpp",fullname="/usr/include/boost/function/function_template.hpp",line="763",arch="i386:x86-64"},frame={level="15",addr="0x00007ffff7f41fa2",func="boost::detail::forward::operator()",file="./boost/test/impl/execution_monitor.ipp",fullname="/usr/include/boost/test/impl/execution_monitor.ipp",line="1388",arch="i386:x86-64"},frame={level="16",addr="0x00007ffff7f41fa2",func="boost::detail::function::function_obj_invoker0<boost::detail::forward, int>::invoke",file="./boost/function/function_template.hpp",fullname="/usr/include/boost/function/function_template.hpp",line="137",arch="i386:x86-64"},frame={level="17",addr="0x00007ffff7f48019",func="boost::function0<int>::operator()",file="./boost/function/function_template.hpp",fullname="/usr/include/boost/function/function_template.hpp",line="763",arch="i386:x86-64"},frame={level="18",addr="0x00007ffff7f48019",func="boost::detail::do_invoke<boost::shared_ptr<boost::detail::translator_holder_base>, boost::function<int ()> >(boost::shared_ptr<boost::detail::translator_holder_base> const&, boost::function<int ()> const&)",file="./boost/test/impl/execution_monitor.ipp",fullname="/usr/include/boost/test/impl/execution_monitor.ipp",line="301",arch="i386:x86-64"},frame={level="19",addr="0x00007ffff7f48019",func="boost::execution_monitor::catch_signals(boost::function<int ()> const&)",file="./boost/test/impl/execution_monitor.ipp",fullname="/usr/include/boost/test/impl/execution_monitor.ipp",line="903",arch="i386:x86-64"},frame={level="20",addr="0x00007ffff7f4848f",func="boost::execution_monitor::execute(boost::function<int ()> const&)",file="./boost/test/impl/execution_monitor.ipp",fullname="/usr/include/boost/test/impl/execution_monitor.ipp",line="1301",arch="i386:x86-64"},frame={level="21",addr="0x00007ffff7f48575",func="boost::execution_monitor::vexecute(boost::function<void ()> const&)",file="./boost/test/impl/execution_monitor.ipp",fullname="/usr/include/boost/test/impl/execution_monitor.ipp",line="1397",arch="i386:x86-64"},frame={level="22",addr="0x00007ffff7f660a1",func="boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::function<void ()> const&, unsigned long)",file="./boost/test/impl/unit_test_monitor.ipp",fullname="/usr/include/boost/test/impl/unit_test_monitor.ipp",line="49",arch="i386:x86-64"},frame={level="23",addr="0x00007ffff7f866b1",func="boost::unit_test::framework::state::execute_test_tree(unsigned long, unsigned long, boost::unit_test::framework::state::random_generator_helper const*) [clone .constprop.0]",file="./boost/test/impl/framework.ipp",fullname="/usr/include/boost/test/impl/framework.ipp",line="815",arch="i386:x86-64"},frame={level="24",addr="0x00007ffff7f86a3d",func="boost::unit_test::framework::state::execute_test_tree(unsigned long, unsigned long, boost::unit_test::framework::state::random_generator_helper const*) [clone .constprop.0]",file="./boost/test/impl/framework.ipp",fullname="/usr/include/boost/test/impl/framework.ipp",line="740",arch="i386:x86-64"},frame={level="25",addr="0x00007ffff7f5040c",func="boost::unit_test::framework::run",file="./boost/test/impl/framework.ipp",fullname="/usr/include/boost/test/impl/framework.ipp",line="1721",arch="i386:x86-64"},frame={level="26",addr="0x00007ffff7f65843",func="boost::unit_test::unit_test_main",file="./boost/test/impl/unit_test_main.ipp",fullname="/usr/include/boost/test/impl/unit_test_main.ipp",line="250",arch="i386:x86-64"},frame={level="27",addr="0x000055555555e934",func="main",file="/usr/include/boost/test/unit_test.hpp",fullname="/usr/include/boost/test/unit_test.hpp",line="64",arch="i386:x86-64"}]
+106^done
+(gdb) 
+&"No line 500 in file \"/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp\".\n"
+107^done,bkpt={number="33",type="breakpoint",disp="keep",enabled="y",addr="<PENDING>",pending="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:500",times="0",original-location="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:500"}
+(gdb) 
+108^done
+(gdb) 
+&"No line 499 in file \"/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp\".\n"
+109^done,bkpt={number="34",type="breakpoint",disp="keep",enabled="y",addr="<PENDING>",pending="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:499",times="0",original-location="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:499"}
+(gdb) 
+110^done
+(gdb) 
+&"No line 498 in file \"/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp\".\n"
+111^done,bkpt={number="35",type="breakpoint",disp="keep",enabled="y",addr="<PENDING>",pending="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:498",times="0",original-location="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:498"}
+(gdb) 
+112^done
+(gdb) 
+&"No line 497 in file \"/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp\".\n"
+113^done,bkpt={number="36",type="breakpoint",disp="keep",enabled="y",addr="<PENDING>",pending="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:497",times="0",original-location="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:497"}
+(gdb) 
+114^done
+(gdb) 
+&"No line 496 in file \"/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp\".\n"
+115^done,bkpt={number="37",type="breakpoint",disp="keep",enabled="y",addr="<PENDING>",pending="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:496",times="0",original-location="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:496"}
+(gdb) 
+116^done
+(gdb) 
+&"No line 495 in file \"/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp\".\n"
+117^done,bkpt={number="38",type="breakpoint",disp="keep",enabled="y",addr="<PENDING>",pending="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:495",times="0",original-location="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:495"}
+(gdb) 
+118^done
+(gdb) 
+&"No line 494 in file \"/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp\".\n"
+119^done,bkpt={number="39",type="breakpoint",disp="keep",enabled="y",addr="<PENDING>",pending="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:494",times="0",original-location="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:494"}
+(gdb) 
+120^done
+(gdb) 
+&"No line 493 in file \"/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp\".\n"
+121^done,bkpt={number="40",type="breakpoint",disp="keep",enabled="y",addr="<PENDING>",pending="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:493",times="0",original-location="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:493"}
+(gdb) 
+122^done
+(gdb) 
+&"No line 492 in file \"/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp\".\n"
+123^done,bkpt={number="41",type="breakpoint",disp="keep",enabled="y",addr="<PENDING>",pending="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:492",times="0",original-location="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:492"}
+(gdb) 
+124^done
+(gdb) 
+&"No line 491 in file \"/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp\".\n"
+125^done,bkpt={number="42",type="breakpoint",disp="keep",enabled="y",addr="<PENDING>",pending="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:491",times="0",original-location="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:491"}
+(gdb) 
+126^done
+(gdb) 
+&"No line 490 in file \"/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp\".\n"
+127^done,bkpt={number="43",type="breakpoint",disp="keep",enabled="y",addr="<PENDING>",pending="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:490",times="0",original-location="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:490"}
+(gdb) 
+128^done
+(gdb) 
+&"No line 489 in file \"/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp\".\n"
+129^done,bkpt={number="44",type="breakpoint",disp="keep",enabled="y",addr="<PENDING>",pending="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:489",times="0",original-location="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:489"}
+(gdb) 
+130^done
+(gdb) 
+131^done,bkpt={number="45",type="breakpoint",disp="keep",enabled="y",addr="<MULTIPLE>",times="0",original-location="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:488",locations=[{number="45.1",enabled="y",addr="0x000055555556f908",func="__static_initialization_and_destruction_0(int, int)",file="../src/tokenClasses.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp",line="488",thread-groups=["i1"]},{number="45.2",enabled="y",addr="0x000055555556f977",func="_GLOBAL__sub_I__ZN7ensc25113tokenObjectPsE()",file="../src/tokenClasses.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp",line="488",thread-groups=["i1"]}]}
+(gdb) 
+132^done
+(gdb) 
+133^done,bkpt={number="46",type="breakpoint",disp="keep",enabled="y",addr="<MULTIPLE>",times="0",original-location="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:487",locations=[{number="46.1",enabled="y",addr="0x000055555556f908",func="__static_initialization_and_destruction_0(int, int)",file="../src/tokenClasses.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp",line="488",thread-groups=["i1"]},{number="46.2",enabled="y",addr="0x000055555556f977",func="_GLOBAL__sub_I__ZN7ensc25113tokenObjectPsE()",file="../src/tokenClasses.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp",line="488",thread-groups=["i1"]}]}
+(gdb) 
+134^done
+(gdb) 
+135^done,bkpt={number="47",type="breakpoint",disp="keep",enabled="y",addr="0x000055555556f7ee",func="ensc251::recursive_parser()",file="../src/tokenClasses.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp",line="486",thread-groups=["i1"],times="0",original-location="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp:486"}
+(gdb) 
+136^done
+(gdb) 
+pp",line="239",arch="i386:x86-64"},frame={level="3",addr="0x000055555556d7f1",func="ensc251::shift_exp",file="../src/tokenClasses.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp",line="260",arch="i386:x86-64"},frame={level="4",addr="0x000055555556de62",func="ensc251::ternary_exp",file="../src/tokenClasses.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp",line="312",arch="i386:x86-64"},frame={level="5",addr="0x000055555556eae1",func="ensc251::assignment_exp",file="../src/tokenClasses.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp",line="410",arch="i386:x86-64"},frame={level="6",addr="0x000055555556e89a",func="ensc251::assignment_exp",file="../src/tokenClasses.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp",line="387",arch="i386:x86-64"},frame={level="7",addr="0x000055555556f26c",func="ensc251::stat",file="../src/tokenClasses.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp",line="461",arch="i386:x86-64"},frame={level="8",addr="0x000055555556f393",func="ensc251::stat_list",file="../src/tokenClasses.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp",line="476",arch="i386:x86-64"},frame={level="9",addr="0x000055555556f7e7",func="ensc251::recursive_parser",file="../src/tokenClasses.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/tokenClasses.cpp",line="490",arch="i386:x86-64"},frame={level="10",addr="0x000055555555ea0c",func="check",file="../src/TestPart4.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/TestPart4.cpp",line="30",arch="i386:x86-64"},frame={level="11",addr="0x000055555555ff89",func="test2::test_method",file="../src/TestPart4.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/TestPart4.cpp",line="70",arch="i386:x86-64"},frame={level="12",addr="0x000055555555fbc3",func="test2_invoker",file="../src/TestPart4.cpp",fullname="/mnt/hgfs/VMsf/eclipse-workspace_22-12/ensc251part4/src/TestPart4.cpp",line="65",arch="i386:x86-64"},frame={level="13",addr="0x000055555556bc41",func="boost::detail::function::void_function_invoker0<void (*)(), void>::invoke",file="/usr/include/boost/function/function_template.hpp",fullname="/usr/include/boost/function/function_template.hpp",line="117",arch="i386:x86-64"},frame={level="14",addr="0x00007ffff7f41fa2",func="boost::function0<void>::operator()",file="./boost/function/function_template.hpp",fullname="/usr/include/boost/function/function_template.hpp",line="763",arch="i386:x86-64"},frame={level="15",addr="0x00007ffff7f41fa2",func="boost::detail::forward::operator()",file="./boost/test/impl/execution_monitor.ipp",fullname="/usr/include/boost/test/impl/execution_monitor.ipp",line="1388",arch="i386:x86-64"},frame={level="16",addr="0x00007ffff7f41fa2",func="boost::detail::function::function_obj_invoker0<boost::detail::forward, int>::invoke",file="./boost/function/function_template.hpp",fullname="/usr/include/boost/function/function_template.hpp",line="137",arch="i386:x86-64"},frame={level="17",addr="0x00007ffff7f48019",func="boost::function0<int>::operator()",file="./boost/function/function_template.hpp",fullname="/usr/include/boost/function/function_template.hpp",line="763",arch="i386:x86-64"},frame={level="18",addr="0x00007ffff7f48019",func="boost::detail::do_invoke<boost::shared_ptr<boost::detail::translator_holder_base>, boost::function<int ()> >(boost::shared_ptr<boost::detail::translator_holder_base> const&, boost::function<int ()> const&)",file="./boost/test/impl/execution_monitor.ipp",fullname="/usr/include/boost/test/impl/execution_monitor.ipp",line="301",arch="i386:x86-64"},frame={level="19",addr="0x00007ffff7f48019",func="boost::execution_monitor::catch_signals(boost::function<int ()> const&)",file="./boost/test/impl/execution_monitor.ipp",fullname="/usr/include/boost/test/impl/execution_monitor.ipp",line="903",arch="i386:x86-64"},frame={level="20",addr="0x00007ffff7f4848f",func="boost::execution_monitor::execute(boost::function<int ()> const&)",file="./boost/test/impl/execution_monitor.ipp",fullname="/usr/include/boost/test/impl/execution_monitor.ipp",line="1301",arch="i386:x86-64"},frame={level="21",addr="0x00007ffff7f48575",func="boost::execution_monitor::vexecute(boost::function<void ()> const&)",file="./boost/test/impl/execution_monitor.ipp",fullname="/usr/include/boost/test/impl/execution_monitor.ipp",line="1397",arch="i386:x86-64"},frame={level="22",addr="0x00007ffff7f660a1",func="boost::unit_test::unit_test_monitor_t::execute_and_translate(boost::function<void ()> const&, unsigned long)",file="./boost/test/impl/unit_test_monitor.ipp",fullname="/usr/include/boost/test/impl/unit_test_monitor.ipp",line="49",arch="i386:x86-64"},frame={level="23",addr="0x00007ffff7f866b1",func="boost::unit_test::framework::state::execute_test_tree(unsigned long, unsigned long, boost::unit_test::framework::state::random_generator_helper const*) [clone .constprop.0]",file="./boost/test/impl/framework.ipp",fullname="/usr/include/boost/test/impl/framework.ipp",line="815",arch="i386:x86-64"},frame={level="24",addr="0x00007ffff7f86a3d",func="boost::unit_test::framework::state::execute_test_tree(unsigned long, unsigned long, boost::unit_test::framework::state::random_generator_helper const*) [clone .constprop.0]",file="./boost/test/impl/framework.ipp",fullname="/usr/include/boost/test/impl/framework.ipp",line="740",arch="i386:x86-64"},frame={level="25",addr="0x00007ffff7f5040c",func="boost::unit_test::framework::run",file="./boost/test/impl/framework.ipp",fullname="/usr/include/boost/test/impl/framework.ipp",line="1721",arch="i386:x86-64"},frame={level="26",addr="0x00007ffff7f65843",func="boost::unit_test::unit_test_main",file="./boost/test/impl/unit_test_main.ipp",fullname="/usr/include/boost/test/impl/unit_test_main.ipp",line="250",arch="i386:x86-64"},frame={level="27",addr="0x000055555555e934",func="main",file="/usr/include/boost/test/unit_test.hpp",fullname="/usr/include/boost/test/unit_test.hpp",line="64",arch="i386:x86-64"}]
 (gdb) 
 85^running
 *running,thread-id="all"
