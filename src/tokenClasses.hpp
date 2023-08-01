@@ -182,6 +182,8 @@ TokenSP recursive_parser();
 TokenSP assignment_exp();
 TokenSP int_assignment_exp();
 TokenSP int_comp_exp();
+// New
+TokenSP pointer_declarator();
 
 class StringBasedToken:public Token
 {
@@ -269,6 +271,22 @@ public:
 	// TODO: ***** Complete this class
 	TokenSP process_declaration() override
 	{
+		if(TokenSP tObjP{pointer_declarator()}){
+			return tObjP;
+		}
+		if(process_token())
+		{
+			if(TokenSP tObjP{tokenObjectPs[tracker]->process_id()})
+			{
+				add_childP(tObjP);
+				return shared_from(this);
+			}
+		}
+		return nullptr;
+	}
+	TokenSP process_pointer_primary_exp() override
+	{
+		std::cout << "[process_pointer_primary_exp]"<<std::endl;
 		if(process_token())
 		{
 			if(TokenSP tObjP{tokenObjectPs[tracker]->process_id()})
@@ -281,19 +299,6 @@ public:
 	}
 	/*
 	TokenSP process_int_id() override
-	{
-		if(process_token())
-		{
-			if(TokenSP tObjP{tokenObjectPs[tracker]->process_id()})
-			{
-				add_childP(tObjP);
-				return shared_from(this);
-			}
-		}
-		return nullptr;
-	}
-
-	TokenSP process_pointer_primary_exp() override
 	{
 		if(process_token())
 		{

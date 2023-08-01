@@ -199,6 +199,29 @@ TokenSP div_exp()
 }
 
 // TODO: ***** Add more functions around here somewhere *****
+
+TokenSP pointer_declarator()
+{
+	std::size_t old_tracker{tracker};
+	TokenSP lowerNodeP{tokenObjectPs[tracker]->process_token()};
+
+	if(lowerNodeP)
+	{
+		if(TokenSP upperNodeP{tokenObjectPs[tracker]->process_punctuator("*")})
+		{
+			if(TokenSP tObjP{tokenObjectPs[tracker]->process_id()})
+			{
+				upperNodeP->add_childP(lowerNodeP);
+				upperNodeP->add_childP(tObjP);
+				return upperNodeP;
+			}
+		}
+	}
+
+	tracker = old_tracker;
+	return nullptr;
+}
+
 /**
  * @brief
 additive_exp can also be represented as 'div_exp {additive_operator div_exp}*'
